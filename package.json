@@ -1,0 +1,15 @@
+{
+  "name": "cy_eduwork",
+  "version": "1.0.0",
+  "description": "cyress eduwork",
+  "main": "index.js",
+  "author": "rizka s",
+  "license": "MIT",
+   "scripts": {
+    "cy.open": "cypress open"
+  },
+  "dependencies": {
+    "@types/mocha": "^10.0.1",
+    "cypress": "^12.4.1"
+  }
+}
