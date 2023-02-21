@@ -1,15 +1,29 @@
 {
-  "name": "cy_eduwork",
+  "name": "this_cy_bdd",
   "version": "1.0.0",
-  "description": "cyress eduwork",
   "main": "index.js",
-  "author": "rizka s",
+  "author": "RizkaS",
   "license": "MIT",
-   "scripts": {
-    "cy.open": "cypress open"
+  "devDependencies": {
+    "cypress": "^12.5.1",
+    "prettier": "^2.8.4"
   },
   "dependencies": {
-    "@types/mocha": "^10.0.1",
-    "cypress": "^12.4.1"
+    "@badeball/cypress-cucumber-preprocessor": "^15.1.3",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "cypress": "latest",
+    "multiple-cucumber-html-reporter": "^3.1.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "**/stepDef/*.js",
+    "html": {
+      "enabled": true
+    }
+  },
+  "scripts": {
+    "cy.open": "cypress open",
+    "test.login": "cypress run --spec cypress/e2e/features/login.feature",
+    "chrome.on.login": "cypress run --spec cypress/e2e/features/login.feature --headed --no-exit --browser chrome"
   }
 }
