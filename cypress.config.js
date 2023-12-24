@@ -9,13 +9,15 @@ async function setupNodeEvents(on,config){
 }
 
 module.exports = defineConfig({
+  modifyObstructiveCode : false,
   chromeWebSecurity:false,
   pageLoadTimeout :10000,
   video:false,
   defaultCommandTimeout:5000,
   e2e: {
+   // baseUrl:"http://zero.webappsecurity.com",
     specPattern:"**/*.feature",
-    supportFile:false,
+    //supportFile:false,
     nonGlobalStepDefinitions: true,
     setupNodeEvents,
   },

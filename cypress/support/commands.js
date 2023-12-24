@@ -23,3 +23,18 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('loginPage',(userName,pass) =>{
+    cy.get('#user-name').wait(1000).clear;
+    cy.get('#user-name').wait(1000).type(userName);
+    cy.get('#password').wait(1000).clear;
+    cy.get('#password').wait(1000).type(pass);
+    cy.get('#login-button').click()
+})
+
+Cypress.Commands.add('popUpPaymentType',(id,TypePayment) =>{
+    cy.get(id).then(cy.wrap).then((element) => {
+        cy.get(element.children('#app').prevObject.prevObject[0].body.querySelector(id).contentWindow.document).then((res) => {
+              cy.wrap(res.selector.body).contains(TypePayment).click()
+        })
+     })
+})

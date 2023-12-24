@@ -1,4 +1,5 @@
 {
-    "usernamaValid": "standard_user",
+    "userNameInvalid":"rizkas",
+    "userName": "standard_user",
     "pass":"secret_sauce"
 }

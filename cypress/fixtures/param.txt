@@ -1,2 +1,0 @@
-"usernamaValid": "standard_user2",
-"pass":"secret_sauce"
