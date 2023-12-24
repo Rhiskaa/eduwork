@@ -1,5 +1,9 @@
  ///<reference types="cypress" />
+
+const cypress = require('cypress');
+
  require('cypress-iframe')
+ require('@cypress/xpath')
  describe('Scenario Saucedemo',()=>{
 
     beforeEach(() => {
